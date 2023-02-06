@@ -1,11 +1,12 @@
+import Router from './components/Routes/routes';
+import {BodyStyle} from './StyleApp';
 
-function App() {
-  return (
-    <div>
-      <header>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <BodyStyle>
+            <Router />;
+        </BodyStyle>
+    )
+} 
 
 export default App;
