@@ -4,7 +4,7 @@ import {BodyStyle} from './StyleApp';
 const App = () => {
     return (
         <BodyStyle>
-            <Router />;
+            <Router />
         </BodyStyle>
     )
 } 

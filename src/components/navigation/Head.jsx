@@ -1,5 +1,5 @@
 import logoComikeate from '../../img/logo e iconos/logo.png';
-import { DivHead,Logo, LogIn, DivLogIn} from './style/styleHead'
+import { DivHead,Logo, LogIn, SignUp, DivLogIn} from './style/styleHead'
 import { Link } from "react-router-dom";
 
 const Head = () => {
@@ -9,8 +9,7 @@ const Head = () => {
         <Logo src={logoComikeate} alt='Comikeate'></Logo>
         <DivLogIn>
           <Link to="/LogInUser"><LogIn>LOG IN</LogIn></Link>
-          ||
-          <Link to="/SignUp"><LogIn>SIGN UP</LogIn></Link>
+          <Link to="/SignUp"><SignUp>SIGN UP</SignUp></Link>
         </DivLogIn>
       </DivHead>
     );

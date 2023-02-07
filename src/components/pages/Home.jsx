@@ -1,17 +1,51 @@
 import { Link } from "react-router-dom";
 import Head from "..//navigation/Head";
 import Nav from "../navigation/Nav";
+import {CartsDiv, CartDivComikeate, BodyDiv, ImgStyleComikeate, TitleCart, CartDivTextil, ImgStyleTextil, CartDivCeramica, ImgStyleCeramica, CartDivPapeleria, ImgStylePapeleria, CartDivMadera, ImgStyleMadera, CartDivLienzos, ImgStyleLienzos } from "../pages/style/HomeStyle";
 
 const Home = () => {
 
-return (<div>
+return (<BodyDiv>
             <Head />
             <Nav />
-            <div>
-                <Link to="/Comikeate">
-                    <h1>Comikeate</h1>
-                </Link>
-            </div>
-        </div>)
+            <CartsDiv>
+                <CartDivComikeate>
+                    <ImgStyleComikeate />
+                    <Link to="/Comikeate" style={{ textDecoration: 'none' }}>
+                        <TitleCart>COMIKEATE</TitleCart>
+                    </Link>
+                </CartDivComikeate>
+                <CartDivTextil>
+                    <ImgStyleTextil />
+                    <Link to="/Textil" style={{ textDecoration: 'none' }}>
+                        <TitleCart>TÉXTIL</TitleCart>
+                    </Link>
+                </CartDivTextil>
+                <CartDivCeramica>
+                    <ImgStyleCeramica />
+                    <Link to="/Ceramica" style={{ textDecoration: 'none' }}>
+                        <TitleCart>CERÁMICA</TitleCart>
+                    </Link>
+                </CartDivCeramica>
+                <CartDivPapeleria>
+                    <ImgStylePapeleria />
+                    <Link to="/Papeleria" style={{ textDecoration: 'none' }}>
+                        <TitleCart>PAPELERÍA</TitleCart>
+                    </Link>
+                </CartDivPapeleria>
+                <CartDivMadera>
+                    <ImgStyleMadera />
+                    <Link to="/Madera" style={{ textDecoration: 'none' }}>
+                        <TitleCart>MADERA</TitleCart>
+                    </Link>
+                </CartDivMadera>
+                <CartDivLienzos>
+                    <ImgStyleLienzos />
+                    <Link to="/Lienzos" style={{ textDecoration: 'none' }}>
+                        <TitleCart>LIENZOS</TitleCart>
+                    </Link>
+                </CartDivLienzos>
+            </CartsDiv>
+        </BodyDiv>)
 }
 export default Home;
