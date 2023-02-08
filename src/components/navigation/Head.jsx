@@ -7,6 +7,7 @@ const Head = () => {
     return (
       <DivHead>
         <Logo src={logoComikeate} alt='Comikeate'></Logo>
+        
         <DivLogIn>
           <Link to="/LogInUser"><LogIn>LOG IN</LogIn></Link>
           <Link to="/SignUp"><SignUp>SIGN UP</SignUp></Link>

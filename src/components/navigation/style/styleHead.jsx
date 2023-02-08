@@ -12,22 +12,30 @@ export const DivHead = styled.div `
 
 export const Logo = styled.img `
     width: 250px;
-    margin-left: 150px;
+    margin-left: 25px;
+    @media (min-width: 768px) {
+        margin-left: 150px;
+      }
 `
 
 export const DivLogIn = styled.label `
-    float: right;
-    background-color: black;
-    width: 200px;
-    height: 30px;
-    position: relative;
-    left: 30px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    border-top: 3px solid black;
-    border-bottom: solid black;
+    display: none;
+    @media (min-width: 768px) {
+        display: inline;
+        float: right;
+        background-color: black;
+        width: 200px;
+        height: 30px;
+        position: relative;
+        left: 30px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        border-radius: 10px 0 0 10px;
+      }
 `
 
 export const LogIn = styled.button `
@@ -38,7 +46,7 @@ export const LogIn = styled.button `
     color: white;
     cursor: pointer;
     width: 90px;
-    height: 30px;
+    height: 24px;
     border-right: solid Crimson; 
     &:hover {
         color: black;

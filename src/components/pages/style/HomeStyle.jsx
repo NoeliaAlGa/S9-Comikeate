@@ -64,9 +64,11 @@ export const ImgStyleComikeate = styled.div `
 
 export const TitleCart = styled.h1 `
     font-size: 24px;
+    font-weight: bold;
     color: black;
+    margin-top: 15px;
 @media (min-width: 768px) {
-    margin-top: -40px;
+    margin-top: -37px;
   }
 
   @media (min-width: 1024px) {

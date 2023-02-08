@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
+
 export const DivButtons = styled.nav `
     border-top: solid black;
     border-bottom: solid black;
     background-color: black;
+    display: none;
+    width: 100%;
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
 `
 
 export const NavButtons = styled.button`
-@media (min-width: 768px) {
+
+  @media (min-width: 768px) {
     font-size: 12px;
     width: 80px;
     height: 30px;
