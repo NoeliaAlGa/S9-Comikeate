@@ -14,13 +14,13 @@ const NavResponsive = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#Comikeate">COMIKEATE</Nav.Link>
-                <Nav.Link href="#Textil">TÉXTIL</Nav.Link>
-                <Nav.Link href="#Ceramica">CERÁMICA</Nav.Link>
-                <Nav.Link href="#Papeleria">PAPELERÍA</Nav.Link>
-                <Nav.Link href="#Madera">MADERA</Nav.Link>
-                <Nav.Link href="#Lienzos">LIENZOS</Nav.Link>
-                <Nav.Link href="#Contactanos">CONTACTANOS</Nav.Link>
+                <Nav.Link href="/Comikeate">COMIKEATE</Nav.Link>
+                <Nav.Link href="/Textil">TÉXTIL</Nav.Link>
+                <Nav.Link href="/Ceramica">CERÁMICA</Nav.Link>
+                <Nav.Link href="/Papeleria">PAPELERÍA</Nav.Link>
+                <Nav.Link href="/Madera">MADERA</Nav.Link>
+                <Nav.Link href="/Lienzos">LIENZOS</Nav.Link>
+                <Nav.Link href="/Contactanos">CONTACTANOS</Nav.Link>
             </Nav>
             <Nav>
                 <Nav.Link href="https://www.instagram.com/comikeate/">

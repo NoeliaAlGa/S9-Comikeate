@@ -3,8 +3,7 @@ import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {BodyTextil } from "../pages/style/TextilStyle";
-import {CardsDiv, TitleStyle} from '../pages/style/GenericStyle';
+import {CardsDiv, TitleStyle, BodyTextil} from '../pages/style/GenericStyle';
 
 const Textil = () => {
   return (
