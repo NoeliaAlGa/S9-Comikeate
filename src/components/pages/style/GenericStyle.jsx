@@ -34,19 +34,11 @@ export const BodyPapeleria = styled(BodyComikeate) `
     background-color: cyan;
 `
 export const BodyMadera = styled(BodyComikeate) `
-    background-color: yellow;
+    background-color: rgb(255, 195, 0);
 `
 export const BodyLienzos = styled(BodyComikeate) `
     background-color: Coral;
 `
 export const BodyContactanos = styled(BodyComikeate) `
     background-color: BlueViolet;
-`
-export const DivFormStyle = styled.div`
-      margin: 2rem;
-      width: 50%;
-`
-
-export const DivTextForm = styled.div `
-    height: 100%;
 `

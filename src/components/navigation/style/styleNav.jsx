@@ -103,14 +103,14 @@ export const PapeleriaButtons = styled(NavButtons)`
 `
 export const MaderaButtons = styled(NavButtons)`
 @media (min-width: 768px) {
-    color: yellow;
+    color: rgb(255, 195, 0);
   }
 
   @media (min-width: 1024px) {
     color: white;
     transition: background-color .5s;
     &:hover {
-        background-color: yellow;
+        background-color: rgb(255, 195, 0);
     }
   }
 `

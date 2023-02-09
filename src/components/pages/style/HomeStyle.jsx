@@ -130,12 +130,12 @@ export const ImgStylePapeleria = styled(ImgStyleComikeate) `
 `
 
 export const CartDivMadera = styled(CartDivComikeate) `
-    background-color: yellow;
+    background-color: rgb(255, 195, 0);
 
   @media (min-width: 1024px) {
     background-color: black;
     &:hover {
-        background-color: yellow;
+        background-color: rgb(255, 195, 0);
     }
   }
 `
