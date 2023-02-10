@@ -4,14 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import InstaImg from '../../img/logo e iconos/instagram.png';
 import FaceImg from '../../img/logo e iconos/facebook.png';
 import {DivNavResponsive, IconoRRSS} from './style/styleNavResponsive';
-import { Link } from "react-router-dom";
 
 const NavResponsive = () => {
   return (
     <DivNavResponsive>
         <Navbar collapseOnSelect expand="md" bg="black" variant="dark">
         <Container>
-            <Link to="/LogIn" style={{ textDecoration: 'none' }}><Navbar.Brand href="#home">👤</Navbar.Brand></Link>
+            <Navbar.Brand href="/LogIn">👤</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -25,10 +24,10 @@ const NavResponsive = () => {
                 <Nav.Link href="/Contactanos">CONTACTANOS</Nav.Link>
             </Nav>
             <Nav>
-                <Nav.Link href="https://www.instagram.com/comikeate/">
+                <Nav.Link href="https://www.instagram.com/comikeate/" rel="noreferrer" target="_blank">
                     <IconoRRSS src={InstaImg} alt='instagram'></IconoRRSS>
                 </Nav.Link>
-                <Nav.Link href="https://www.instagram.com/comikeate/">
+                <Nav.Link href="https://www.instagram.com/comikeate/" rel="noreferrer" target="_blank">
                     <IconoRRSS src={FaceImg} alt='Facebook'></IconoRRSS>
                 </Nav.Link>
             </Nav>

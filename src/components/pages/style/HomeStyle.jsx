@@ -9,10 +9,11 @@ import ImgLienzos from "../../../img/productos/lienzos/lienzoSW.jpg";
 export const BodyDiv = styled.div `
     background-color: orange;
     height: auto;
-    width: 82vh;
+    width: 100%;
     padding-bottom: 2rem;
     @media (min-width: 768px) {
         width: 100%;
+        padding-bottom: 2rem;
       }
 `
 
@@ -23,7 +24,7 @@ export const CartsDiv = styled.div `
 export const CartDivComikeate = styled.div `
     display: block;
     width: 90%;
-    height: 380px;
+    height: 350px;
     margin: 2rem 0 0 1rem;
     transition: background-color .5s;
     background-color: Crimson;
@@ -66,7 +67,7 @@ export const TitleCart = styled.h1 `
     font-size: 24px;
     font-weight: bold;
     color: black;
-    margin-top: 15px;
+    margin-top: 13px;
 @media (min-width: 768px) {
     margin-top: -37px;
   }

@@ -18,11 +18,8 @@ export const TitleStyle = styled.h1`
 export const BodyComikeate = styled.div `
     background-color: Crimson;
     height: 100%;
-    width: 82vh;
+    width: 100%;
     padding-bottom: 2rem;
-    @media (min-width: 768px) {
-        width: 100%;
-      }
 `
 export const BodyTextil = styled(BodyComikeate) `
     background-color: ForestGreen;

@@ -1,6 +1,7 @@
 import Head from "..//navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
+import Footer from "../navigation/Footer";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ImgContactanos from "../../img/productos/lienzos/dragonBall.jpg"
@@ -30,9 +31,6 @@ const Contactanos = () => {
                   type="email"
                   placeholder="Escribe tú mail aquí ^^"
                 />
-                <Form.Text className="text-muted">
-                  ¡Tranquilo tú mail esta seguro con nosotros!
-                </Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>
@@ -50,6 +48,7 @@ const Contactanos = () => {
           <ImgContactStyle src={ImgContactanos} alt="contactanos"></ImgContactStyle>
         </DivFormStyle>
       </CardsDiv>
+      <Footer />
     </BodyContactanos>
   );
 };

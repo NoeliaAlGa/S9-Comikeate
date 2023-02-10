@@ -2,6 +2,7 @@
 import Head from "../../components/navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
+import Footer from "../navigation/Footer";
 import imgSignUp from "../../img/productos/personalizaciones/perrito.jpg";
 import Button from "react-bootstrap/Button";
 import { BodySignUp, TitleStyle, CardsDiv } from "../pages/style/GenericStyle";
@@ -60,6 +61,7 @@ const SignUp = () => {
           </StyleForm>
         </DivLISUStyle>
       </CardsDiv>
+      <Footer />
     </BodySignUp>
   );
 };

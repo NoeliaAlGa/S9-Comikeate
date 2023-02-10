@@ -1,6 +1,7 @@
 import Head from "..//navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
+import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {CardsDiv, TitleStyle, BodyMadera} from '../pages/style/GenericStyle';
@@ -25,6 +26,7 @@ const Madera = () => {
             </Card.Body>
         </Card>
       </CardsDiv>
+      <Footer />
     </BodyMadera>
   );
 };

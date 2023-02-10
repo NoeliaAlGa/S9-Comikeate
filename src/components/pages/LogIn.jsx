@@ -2,6 +2,7 @@
 import Head from "../../components/navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
+import Footer from "../navigation/Footer";
 import Button from "react-bootstrap/Button";
 import imgLogIn from "../../img/productos/personalizaciones/chica.jpg";
 import { BodyLogIn, TitleStyle, CardsDiv } from "../pages/style/GenericStyle";
@@ -56,6 +57,7 @@ const LogInUser = () => {
           </StyleForm>
         </DivLISUStyle>
       </CardsDiv>
+      <Footer />
     </BodyLogIn>
   );
 };
