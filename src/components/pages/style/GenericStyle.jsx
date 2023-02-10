@@ -42,3 +42,10 @@ export const BodyLienzos = styled(BodyComikeate) `
 export const BodyContactanos = styled(BodyComikeate) `
     background-color: BlueViolet;
 `
+export const BodyLogIn = styled(BodyComikeate) `
+    background-color: Crimson;
+`
+
+export const BodySignUp = styled(BodyComikeate) `
+    background-color: rgb(255, 195, 0);
+`
