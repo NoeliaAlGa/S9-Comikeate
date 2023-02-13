@@ -14,6 +14,12 @@ width: 35px;
 
 export const NombreLogIn = styled.p `
   margin-bottom: 0;
+  color: white;
+`
+export const NombreLogInResp = styled.label `
+  margin-bottom: 0;
+  color: white;
+  margin: 0px 10px 0px 10px;
 `
 
 export const LogOutButtons = styled.button`

@@ -7,6 +7,7 @@ const LoguinActual =() => {
   
     if(actualLogIn !==null) {
       return (<DivLogIn>
+                <Link to="/MenuUser" style={{ textDecoration: 'none' }}>🏠 </Link>
                 <NombreLogIn>{actualLogIn[0].nombre}</NombreLogIn>
                 <Link to="/LogIn"><LogOutButtons onClick={()=> {
                     localStorage.removeItem("LogedUser");
