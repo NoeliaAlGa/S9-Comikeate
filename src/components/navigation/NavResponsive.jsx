@@ -1,16 +1,29 @@
 import Container from 'react-bootstrap/Container';
+import { Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import InstaImg from '../../img/logo e iconos/instagram.png';
 import FaceImg from '../../img/logo e iconos/facebook.png';
-import {DivNavResponsive, IconoRRSS} from './style/styleNavResponsive';
+import {DivNavResponsive, IconoRRSS, LogOutButtons} from './style/styleNavResponsive';
 
 const NavResponsive = () => {
+
+const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
+
+  let user;
+  let logOut;
+  if(actualLogIn !==null) {
+    user = `${actualLogIn[0].nombre}`;
+    logOut = <Link to="/SignUp"><LogOutButtons onClick={()=> {
+      localStorage.removeItem("LogedUser");
+    } }>LOG OUT</LogOutButtons></Link>
+  }
+
   return (
     <DivNavResponsive>
         <Navbar collapseOnSelect expand="md" bg="black" variant="dark">
         <Container>
-            <Navbar.Brand href="/LogIn">👤</Navbar.Brand>
+            <Navbar.Brand href="/LogIn">👤{user} {logOut}</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
