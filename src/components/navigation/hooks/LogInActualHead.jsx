@@ -5,9 +5,19 @@ import { LogIn, SignUp, DivLogIn} from '../style/styleHead'
 const LoguinActual =() => {
     const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
   
-    if(actualLogIn !==null) {
+    if(actualLogIn !==null && actualLogIn[0].nombre !== "Admin") {
       return (<DivLogIn>
                 <Link to="/MenuUser" style={{ textDecoration: 'none' }}>🏠 </Link>
+                <NombreLogIn>{actualLogIn[0].nombre}</NombreLogIn>
+                <Link to="/LogIn"><LogOutButtons onClick={()=> {
+                    localStorage.removeItem("LogedUser");
+                }}>LOG OUT</LogOutButtons>
+                </Link>
+              </DivLogIn>)
+    }
+    else if(actualLogIn !==null && actualLogIn[0].nombre === "Admin" && actualLogIn[0].contraseña === "Admin") {
+      return (<DivLogIn>
+                <Link to="/MenuAdmin" style={{ textDecoration: 'none' }}>🏠 </Link>
                 <NombreLogIn>{actualLogIn[0].nombre}</NombreLogIn>
                 <Link to="/LogIn"><LogOutButtons onClick={()=> {
                     localStorage.removeItem("LogedUser");

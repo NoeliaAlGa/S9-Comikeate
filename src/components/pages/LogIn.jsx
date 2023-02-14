@@ -3,7 +3,6 @@ import Head from "../../components/navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
-import BuscarUsuarios from "./hooks/BuscarUsuarios";
 import Button from "react-bootstrap/Button";
 import imgLogIn from "../../img/productos/personalizaciones/chica.jpg";
 import { BodyLogIn, TitleStyle, CardsDiv } from "../pages/style/GenericStyle";
@@ -17,6 +16,7 @@ import {
   DivLISUStyle,
 } from "./style/LogInSignUpStyle";
 import { Link } from "react-router-dom";
+import LogInUserOAdmin from "./hooks/LogInUserOAdmin";
 
 const LogIn = () => {
   const [nombreUsuario, setNombreUsuario] = useState("");
@@ -53,12 +53,9 @@ const LogIn = () => {
             <TextInformation>
               * Registrarse és obligatorio para hacer la compra.
             </TextInformation>
-            <Link to="/MenuUser">
-              <Button variant="warning" type="submit" onClick={() =>
-                BuscarUsuarios(nombreUsuario, contraseñaUsuario)}>
-                <b>LOG IN</b>
-              </Button>
-            </Link>
+            <LogInUserOAdmin 
+              nombreUsuario = {nombreUsuario} 
+              contraseñaUsuario = {contraseñaUsuario} />
             <div>
               <InformationRegistered>
                 No estas registrado?

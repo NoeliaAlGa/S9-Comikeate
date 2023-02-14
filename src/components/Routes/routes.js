@@ -11,7 +11,7 @@ import Contactanos from '../pages/Contactanos';
 // import Carrito from '../pages/Carrito';
 // import Ficha from '../pages/Ficha';
 import MenuUser from '../pages/MenuUser';
-// import MenuAdmin from '../pages/MenuAdmin';
+import MenuAdmin from '../pages/MenuAdmin';
 import LogIn from '../pages/LogIn';
 import SignUp from '../pages/SignUp';
 
@@ -30,7 +30,7 @@ const Router = () => (
             {/* <Route path="/Ficha/" element={<Ficha />}/>
             <Route path="/Carrito/" element={<Carrito />}/> */}
             <Route path="/MenuUser/" element={<MenuUser />}/>
-            {/* <Route path="/MenuAdmin/" element={<MenuAdmin />}/> */}
+            <Route path="/MenuAdmin/" element={<MenuAdmin />}/>
             <Route path="/LogIn/" element={<LogIn />}/>
             <Route path="/SignUp/" element={<SignUp />}/>
         </Routes>

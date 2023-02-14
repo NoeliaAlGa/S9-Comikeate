@@ -1,7 +1,9 @@
 import Router from './components/Routes/routes';
-import {BodyStyle} from './StyleApp';
+import {BodyStyle} from './style/StyleApp';
+import UsuariAdminLS from './hooks/UsuariAdminLS';
 
 const App = () => {
+    UsuariAdminLS();
     return (
         <BodyStyle>
             <Router />
