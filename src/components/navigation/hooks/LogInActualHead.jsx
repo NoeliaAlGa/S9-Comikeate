@@ -7,12 +7,13 @@ const LoguinActual =() => {
   
     if(actualLogIn !==null && actualLogIn[0].nombre !== "Admin") {
       return (<DivLogIn>
-                <Link to="/MenuUser" style={{ textDecoration: 'none' }}>🏠 </Link>
+                <Link to="/MenuUser" style={{ textDecoration: 'none' }}>🏠</Link>
                 <NombreLogIn>{actualLogIn[0].nombre}</NombreLogIn>
                 <Link to="/LogIn"><LogOutButtons onClick={()=> {
                     localStorage.removeItem("LogedUser");
                 }}>LOG OUT</LogOutButtons>
                 </Link>
+                <Link to="/Carrito" style={{ textDecoration: 'none' }}>🛒</Link>
               </DivLogIn>)
     }
     else if(actualLogIn !==null && actualLogIn[0].nombre === "Admin" && actualLogIn[0].contraseña === "Admin") {
@@ -29,6 +30,7 @@ const LoguinActual =() => {
       return (<DivLogIn>
                 <Link to="/LogIn"><LogIn>LOG IN</LogIn></Link>
                 <Link to="/SignUp"><SignUp>SIGN UP</SignUp></Link>
+                <Link to="/Carrito" style={{ textDecoration: 'none' }}>🛒</Link>
             </DivLogIn>)
     }
   }

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {LogOutButtons, NombreLogInResp} from '../style/styleNavResponsive';
 
 const LogInActualResponsive = () => {
-    debugger;
     const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
 
   if(actualLogIn !==null && actualLogIn[0].nombre !== "Admin") {

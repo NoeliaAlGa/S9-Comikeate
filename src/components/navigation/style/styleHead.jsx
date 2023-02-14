@@ -24,10 +24,10 @@ export const DivLogIn = styled.label `
         display: inline;
         float: right;
         background-color: black;
-        width: 200px;
+        width: 250px;
         height: 30px;
         position: relative;
-        left: 30px;
+        left: 25px;
         color: white;
         display: flex;
         align-items: center;
