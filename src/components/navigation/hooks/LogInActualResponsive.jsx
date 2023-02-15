@@ -5,17 +5,17 @@ import {LogOutButtons, NombreLogInResp} from '../style/styleNavResponsive';
 const LogInActualResponsive = () => {
     const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
 
-  if(actualLogIn !==null && actualLogIn[0].nombre !== "Admin") {
+  if(actualLogIn !==null && actualLogIn.nombre !== "Admin") {
     return (<>
                 <Link to="/MenuUser" style={{ textDecoration: 'none' }}>🏠</Link>
-                <NombreLogInResp>{actualLogIn[0].nombre}</NombreLogInResp>
+                <NombreLogInResp>{actualLogIn.nombre}</NombreLogInResp>
                 <Link to="/LogIn"><LogOutButtons onClick={()=> {localStorage.removeItem("LogedUser")} }>LOG OUT</LogOutButtons></Link>
             </>)
     }
-    else if(actualLogIn !==null && actualLogIn[0].nombre === "Admin" && actualLogIn[0].contraseña === "Admin") {
+    else if(actualLogIn !==null && actualLogIn.nombre === "Admin" && actualLogIn.contraseña === "Admin") {
         return (<>
                     <Link to="/MenuAdmin" style={{ textDecoration: 'none' }}>🏠</Link>
-                    <NombreLogInResp>{actualLogIn[0].nombre}</NombreLogInResp>
+                    <NombreLogInResp>{actualLogIn.nombre}</NombreLogInResp>
                     <Link to="/LogIn"><LogOutButtons onClick={()=> {localStorage.removeItem("LogedUser")} }>LOG OUT</LogOutButtons></Link>
                 </>)
         }

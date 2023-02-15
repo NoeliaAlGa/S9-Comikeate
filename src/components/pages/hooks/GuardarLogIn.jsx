@@ -1,21 +1,14 @@
-
-
 function GuardarLogIn(nombreUsuario, contraseñaUsuario) {
-  
-    const logedUser =
-    window.localStorage.getItem("LogedUser") === null
-      ? []
-      : localStorage.removeItem("LogedUser");
+  if (window.localStorage.getItem("LogedUser") !== null) {
+    localStorage.removeItem("LogedUser");
+  }
 
-     
-        const usuario = {
-            nombre: nombreUsuario,
-            contraseña: contraseñaUsuario,
-          };
-        
-          logedUser.push(usuario);
-          window.localStorage.setItem("LogedUser", JSON.stringify(logedUser));
-        
+  const usuario = {
+    nombre: nombreUsuario,
+    contraseña: contraseñaUsuario,
+  };
+
+  window.localStorage.setItem("LogedUser", JSON.stringify(usuario));
 }
 
-export default GuardarLogIn
+export default GuardarLogIn;

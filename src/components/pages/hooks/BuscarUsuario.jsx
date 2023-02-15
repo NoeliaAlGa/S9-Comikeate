@@ -2,7 +2,7 @@
 
 function BuscarUsuario(nombreUsuario, contraseñaUsuario) {
 
-    const usuarios =  JSON.parse(window.localStorage.getItem("usuarios"));
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
      const encontrado = usuarios.some(usuario => usuario.nombre === nombreUsuario && usuario.contraseña === contraseñaUsuario);
 
