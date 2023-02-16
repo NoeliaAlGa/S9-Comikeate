@@ -4,7 +4,7 @@ import ImgTextil from "../../../img/productos/textil/sudadera.jpg";
 import ImgCeramica from "../../../img/productos/ceramica/taza.jpg";
 import ImgPapeleria from "../../../img/productos/papeleria/postal.jpg";
 import ImgMadera from "../../../img/productos/madera/cuelgaPuertaPokemnmon.jpg";
-import ImgLienzos from "../../../img/productos/lienzos/lienzoSW.jpg";
+import ImgLienzos from "../../../img/productos/lienzos/acuarelaSW.jpg";
 
 export const BodyDiv = styled.div `
     background-color: orange;

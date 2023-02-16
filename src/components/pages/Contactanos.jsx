@@ -4,7 +4,7 @@ import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import ImgContactanos from "../../img/productos/lienzos/dragonBall.jpg"
+import ImgContactanos from "../../img/productos/lienzos/lienzoDragonBall.jpg"
 import {
   BodyContactanos,
   TitleStyle,
