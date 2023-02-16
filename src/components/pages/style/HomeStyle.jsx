@@ -60,7 +60,6 @@ export const ImgStyleComikeate = styled.div `
         background-position: top;
         background-size: 100%;
     }
-
 `
 
 export const TitleCart = styled.h1 `

@@ -10,11 +10,41 @@ async function ObtenerProductos(tipo) {
     } catch (error) {
       console.error('estoy dentroooooo!!!!!!!!!!!');
       console.error(error);
-      return [
-        {id:1, nombre:'test', precio:15, infoProducto:'xxxx', img: 'comikeate_1.jpg', tipo: 'comikeate'},
-        {id:2, nombre:'test1', precio:15, infoProducto:'xxxx', img: 'comikeate_2.jpg', tipo: 'comikeate'},
-        {id:3, nombre:'test2', precio:15, infoProducto:'xxxx', img: 'comikeate_3.jpg', tipo: 'comikeate'}
-    ];
+      if(tipo === "comikeate") {
+        return [
+          {id:1, nombre:'ilustración', precio:15, infoProducto:'Convierte a tu familia y amigos en comic o en sus personajes favoritos. Envía su foto y explicadnos cuál es tu idea. Estaremos en contacto en todo momento mientras se realiza la ilustración. Se realizarán 2 pruebas, una al hacer el esbozo y otra al acabar el coloreado, para poder hacer cambios si es necesario. Una vez entregado el trabajo no se podrán hacer cambios.', img: 'familiabebe.jpg', tipo: 'comikeate'},
+          {id:2, nombre:'Ilustración en lienzo', precio:55, infoProducto:'Lienzo de 30x40 con ilustración personalizada. Envía una foto y explicadnos cuál es tu idea. Estaremos en contacto en todo momento mientras se realiza la ilustración. Se realizarán 2 pruebas, una al hacer el esbozo y otra al acabar el coloreado, para poder hacer cambios si es necesario. ¡Una vez dado el ok a la prueba se realizará la impresión del lienzo y en pocos días lo tendrás en casa!.', img: 'diadelamadre.jpg', tipo: 'comikeate'}
+        ]
+      }
+      else if (tipo === "textil") {
+        return [
+          {id:3, nombre:'Bolsa Cruela', precio:10, infoProducto:'xxxx', img: 'bolsacruela.jpg', tipo: 'textil'},
+          {id:4, nombre:'Camiseta Harry Potter', precio:15, infoProducto:'xxxx', img: 'camiseta HP.jpg', tipo: 'textil'},
+          {id:5, nombre:'Camiseta Loki', precio:15, infoProducto:'xxxx', img: 'loki camiseta.jpg', tipo: 'textil'},
+        ]
+      }
+      else if (tipo === "regalos") {
+        return [
+          {id:6, nombre:'Gorras Dr Slum', precio:25, infoProducto:'xxxx', img: 'gorra drSlum.jpg', tipo: 'regalos'},
+          {id:7, nombre:'Chapa dia de la mujer', precio:15, infoProducto:'xxxx', img: 'chapaAmigas.jpg', tipo: 'regalos'},
+          {id:8, nombre:'Caja para anillos', precio:15, infoProducto:'xxxx', img: 'cajaPersonalizadaAnillos.jpg', tipo: 'regalos'},
+        ]
+      }
+      else if (tipo === "madera") {
+        return [
+          {id:9, nombre:'Cuelga puertas Pokemon', precio:10, infoProducto:'xxxx', img: 'cuelgaPuertaPokemnmon.jpg', tipo: 'madera'},
+          {id:10, nombre:'Movil Hercules', precio:15, infoProducto:'xxxx', img: 'mobilHercules.jpg', tipo: 'madera'},
+          {id:11, nombre:'Adorno entrada casa', precio:15, infoProducto:'xxxx', img: 'adornoCasa.jpg', tipo: 'madera'},
+        ]
+      }
+      else {
+        return [
+          {id:12, nombre:'Lienzo DragonBall', precio:15, infoProducto:'xxxx', img: 'lienzoDragonBall.jpg', tipo: 'lienzos'},
+          {id:13, nombre:'Cuadro madera Joker', precio:15, infoProducto:'xxxx', img: 'maderaJoker.jpg', tipo: 'lienzos'},
+          {id:14, nombre:'Star Wars acrilic acuarela', precio:15, infoProducto:'xxxx', img: 'acuarelaSW.jpg', tipo: 'lienzos'}
+        ];
+      }
+   
     }
   }
   
