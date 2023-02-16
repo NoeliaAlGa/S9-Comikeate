@@ -8,6 +8,8 @@ import {CardsDiv, CardStyle,ImgCard, TitleStyle,TitleCards,TextCards,PrecioCards
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
 import img1 from "../../img/productos/personalizaciones/familiabebe.jpg";
 // import img2 from "../../img/productos/personalizaciones/diadelamadre.jpg"
+import añadirAlCarrito from "./hooks/AñadirAlCarrito";
+
 const Comikeate = () => {
   const productosComikeate = useEffectObtenerProductos("comikeate");
   console.log("productosComikeate", productosComikeate);
@@ -28,7 +30,7 @@ const Comikeate = () => {
                     <TitleCards><b>{producto.nombre}</b></TitleCards>
                     <TextCards>{producto.infoProducto}</TextCards>
                     <PrecioCards><b>{producto.precio}€</b></PrecioCards>
-                    <Button variant="primary" >Añadir a la cesta</Button>
+                    <Button variant="primary" onClick={() => añadirAlCarrito(producto.nombre, producto.precio)}>Añadir a la cesta</Button>
                     </Card.Body>
                 </Card>
               )
