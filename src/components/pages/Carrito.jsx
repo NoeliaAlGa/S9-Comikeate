@@ -5,6 +5,10 @@ import Footer from "../navigation/Footer";
 import Table from "react-bootstrap/Table";
 import { BodyDiv } from "./style/HomeStyle";
 import { CardsDiv, TitleStyle } from "./style/GenericStyle";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import añadirListaPedidos from "./hooks/añadirListaPedidos";
+import borrarCarrito from "./hooks/BorrarCarrito";
 
 const Carrito = () => {
   const elementosCarrito =
@@ -12,10 +16,25 @@ const Carrito = () => {
       ? []
       : JSON.parse(window.localStorage.getItem("carrito"));
 
-  console.log("elementos Carrito.jsx: ", elementosCarrito);
   let sumaTotal = elementosCarrito.reduce((acumulador, producto) => {
     return acumulador + producto.precio * producto.cantidad;
   }, 0);
+
+  const toLogedUser =
+    window.localStorage.getItem("LogedUser") === undefined
+    ? <Link to="/LogIn">
+        <Button variant="primary" type="submit">
+        <b>SIGN UP</b>
+        </Button>
+      </Link>
+    : <Link to="/MenuUser"><Button variant="primary" type="submit" onClick={() => {
+      añadirListaPedidos(elementosCarrito);
+      borrarCarrito();
+      alert("Pagado Correctamente");
+    }}>
+        <b>COMPRAR</b>
+        </Button>
+        </Link>
   return (
     <BodyDiv>
       <Head />
@@ -25,7 +44,7 @@ const Carrito = () => {
         <TitleStyle>Carrito</TitleStyle>
         <Table responsive>
           <thead>
-            <tr>
+            <tr key="1">
               <th>ID</th>
               <th>Producto</th>
               <th>Cantidad</th>
@@ -35,7 +54,7 @@ const Carrito = () => {
           <tbody>
             {elementosCarrito.map((producto, index) => {
               return (
-                <tr>
+                <tr key={index + 1}>
                   <td>{index + 1}</td>
                   <td>{producto.nombre}</td>
                   <td>{producto.cantidad}</td>
@@ -46,7 +65,7 @@ const Carrito = () => {
                 </tr>
               );
             })}
-            <tr>
+            <tr key="2">
               <td></td>
               <td></td>
               <td>
@@ -56,6 +75,7 @@ const Carrito = () => {
             </tr>
           </tbody>
         </Table>
+        <>{toLogedUser}</>
       </CardsDiv>
       <Footer />
     </BodyDiv>
