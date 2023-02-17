@@ -5,25 +5,24 @@ import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import {CardsDiv, TitleStyle, BodyMadera, RowDiv, CardDiv2, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
+import {CardsDiv, TitleStyle, BodyRegalos, RowDiv, CardDiv2, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
-import img1 from "../../img/productos/madera/cuelgaPuertaPokemnmon.jpg";
+import img1 from "../../img/productos/regalos/chapaAmigas.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
 
-
-const Madera = () => {
-  const productosMadera = useEffectObtenerProductos("madera");
-  console.log("productosComikeate", productosMadera);
+const Regalos = () => {
+  const productosRegalos = useEffectObtenerProductos("regalos");
+  console.log("productosComikeate", productosRegalos);
 
   return (
-    <BodyMadera>
+    <BodyRegalos>
       <Head />
       <Nav />
       <NavResponsive />
       <CardsDiv>
-        <TitleStyle>MADERA</TitleStyle>
+        <TitleStyle>REGALOS</TitleStyle>
         <RowDiv xs={1} md={3} className="g-4">
-          {productosMadera.map((producto) => (
+          {productosRegalos.map((producto) => (
             <Col>
               <CardDiv2>
                 <ImgCard variant="top" src={img1} />
@@ -52,7 +51,7 @@ const Madera = () => {
         </RowDiv>
       </CardsDiv>
       <Footer />
-    </BodyMadera>
+    </BodyRegalos>
   );
 };
-export default Madera;
+export default Regalos;

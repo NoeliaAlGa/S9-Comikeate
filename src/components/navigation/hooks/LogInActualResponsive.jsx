@@ -10,6 +10,7 @@ const LogInActualResponsive = () => {
                 <Link to="/MenuUser" style={{ textDecoration: 'none' }}>🏠</Link>
                 <NombreLogInResp>{actualLogIn.nombre}</NombreLogInResp>
                 <Link to="/LogIn"><LogOutButtons onClick={()=> {localStorage.removeItem("LogedUser")} }>LOG OUT</LogOutButtons></Link>
+                <Link to="/Carrito" style={{ textDecoration: 'none' }}>🛒</Link>
             </>)
     }
     else if(actualLogIn !==null && actualLogIn.nombre === "Admin" && actualLogIn.contraseña === "Admin") {

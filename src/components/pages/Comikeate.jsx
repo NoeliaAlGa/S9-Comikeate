@@ -2,12 +2,22 @@ import Head from "..//navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import {CardsDiv, CardStyle,ImgCard, TitleStyle,TitleCards,TextCards,PrecioCards, BodyComikeate} from '../pages/style/GenericStyle';
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import {
+  CardsDiv,
+  TitleStyle,
+  PrecioCards,
+  BodyComikeate,
+  ImgCard,
+  CardDiv,
+  RowDiv,
+  ButtonInBottom,
+  TextCards,
+} from "../pages/style/GenericStyle";
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
 import img1 from "../../img/productos/personalizaciones/familiabebe.jpg";
-// import img2 from "../../img/productos/personalizaciones/diadelamadre.jpg"
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
 
 const Comikeate = () => {
@@ -20,22 +30,34 @@ const Comikeate = () => {
       <NavResponsive />
       <CardsDiv>
         <TitleStyle>COMIKEATE</TitleStyle>
-        <CardStyle>
-        {productosComikeate.map((producto) => {
-            // const srcImg = `../../img/productos/personalizaciones/${producto.img}`;
-            return (
-                <Card key={producto.id} style={{margin: "2rem"}}>
-                    <ImgCard src={img1} />
-                    <Card.Body>
-                    <TitleCards><b>{producto.nombre}</b></TitleCards>
-                    <TextCards>{producto.infoProducto}</TextCards>
-                    <PrecioCards><b>{producto.precio}€</b></PrecioCards>
-                    <Button variant="primary" onClick={() => añadirAlCarrito(producto.nombre, producto.precio)}>Añadir a la cesta</Button>
-                    </Card.Body>
-                </Card>
-              )
-        })}
-        </CardStyle>
+        <RowDiv xs={1} md={2} className="g-4">
+          {productosComikeate.map((producto) => (
+            <Col>
+              <CardDiv>
+                <ImgCard variant="top" src={img1} />
+                <Card.Body>
+                  <Card.Title>
+                    <b>{producto.nombre}</b>
+                  </Card.Title>
+                  <TextCards>{producto.infoProducto}</TextCards>
+                  <ButtonInBottom>
+                    <PrecioCards>
+                      <b>{producto.precio}€</b>
+                    </PrecioCards>
+                    <Button
+                      variant="primary"
+                      onClick={() =>
+                        añadirAlCarrito(producto.nombre, producto.precio)
+                      }
+                    >
+                      <b>AÑADIR AL CARRITO</b>
+                    </Button>
+                  </ButtonInBottom>
+                </Card.Body>
+              </CardDiv>
+            </Col>
+          ))}
+        </RowDiv>
       </CardsDiv>
       <Footer />
     </BodyComikeate>

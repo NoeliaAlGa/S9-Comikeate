@@ -26,8 +26,8 @@ return (<BodyDiv>
                 </CartDivTextil>
                 <CartDivCeramica>
                     <ImgStyleCeramica />
-                    <Link to="/Ceramica" style={{ textDecoration: 'none' }}>
-                        <TitleCart>CERÁMICA</TitleCart>
+                    <Link to="/Regalos" style={{ textDecoration: 'none' }}>
+                        <TitleCart>REGALOS</TitleCart>
                     </Link>
                 </CartDivCeramica>
                 <CartDivPapeleria>

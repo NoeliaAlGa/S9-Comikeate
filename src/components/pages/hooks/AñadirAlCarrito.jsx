@@ -6,9 +6,6 @@ function añadirAlCarrito(titulo, precio) {
   : JSON.parse(window.localStorage.getItem("carrito"));
 
   const articuloRepetido = elementosCarrito.find(producto => producto.nombre === titulo); 
-    console.log(articuloRepetido)
-
-   
   
     if(articuloRepetido === undefined) {
         const carrito = {

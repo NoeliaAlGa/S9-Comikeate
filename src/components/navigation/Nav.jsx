@@ -1,6 +1,6 @@
 import React from 'react';
 import {DivButtons} from './style/styleNav';
-import {HomeButtons, ComikeateButtons, TextilButtons, CeramicaButtons, PapeleriaButtons, MaderaButtons, ContactanosButtons, LienzosButtons} from './style/styleNav';
+import {HomeButtons, ComikeateButtons, TextilButtons, CeramicaButtons, MaderaButtons, ContactanosButtons, LienzosButtons} from './style/styleNav';
 import { Link } from "react-router-dom";
 
 
@@ -16,11 +16,8 @@ const Nav = () => {
             <Link to="/Textil/">
                 <TextilButtons><b>TÉXTIL</b></TextilButtons>
             </Link>
-            <Link to="/Ceramica/">
-                <CeramicaButtons><b>CERÁMICA</b></CeramicaButtons>
-            </Link>
-            <Link to="/Papeleria/">
-                <PapeleriaButtons><b>PAPELERÍA</b></PapeleriaButtons>
+            <Link to="/Regalos/">
+                <CeramicaButtons><b>REGALOS</b></CeramicaButtons>
             </Link>
             <Link to="/Madera/">
                 <MaderaButtons><b>MADERA</b></MaderaButtons>

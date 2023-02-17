@@ -1,12 +1,20 @@
-import Head from "..//navigation/Head";
+import Head from "../navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {CardsDiv, TitleStyle, BodyLienzos} from '../pages/style/GenericStyle';
+import Col from 'react-bootstrap/Col';
+import {CardsDiv, TitleStyle, BodyLienzos, RowDiv, CardDiv2, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
+import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
+import img1 from "../../img/productos/lienzos/maderaJoker.jpg";
+import añadirAlCarrito from "./hooks/AñadirAlCarrito";
+
 
 const Lienzos = () => {
+  const productosLienzos = useEffectObtenerProductos("lienzos");
+  console.log("productosComikeate", productosLienzos);
+
   return (
     <BodyLienzos>
       <Head />
@@ -14,17 +22,34 @@ const Lienzos = () => {
       <NavResponsive />
       <CardsDiv>
         <TitleStyle>LIENZOS</TitleStyle>
-        <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-            <Card.Title>Lienzos</Card.Title>
-            <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>
+        <RowDiv xs={1} md={3} className="g-4">
+          {productosLienzos.map((producto) => (
+            <Col>
+              <CardDiv2>
+                <ImgCard variant="top" src={img1} />
+                <Card.Body>
+                  <Card.Title>
+                    <b>{producto.nombre}</b>
+                  </Card.Title>
+                  <TextCards>{producto.infoProducto}</TextCards>
+                  <ButtonInBottom>
+                    <PrecioCards>
+                      <b>{producto.precio}€</b>
+                    </PrecioCards>
+                    <Button
+                      variant="primary"
+                      onClick={() =>
+                        añadirAlCarrito(producto.nombre, producto.precio)
+                      }
+                    >
+                      <b>AÑADIR AL CARRITO</b>
+                    </Button>
+                  </ButtonInBottom>
+                </Card.Body>
+              </CardDiv2>
+            </Col>
+          ))}
+        </RowDiv>
       </CardsDiv>
       <Footer />
     </BodyLienzos>

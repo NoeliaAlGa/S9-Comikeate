@@ -7,6 +7,15 @@ import { BodyDiv } from "./style/HomeStyle";
 import { CardsDiv, TitleStyle } from "./style/GenericStyle";
 
 const Carrito = () => {
+  const elementosCarrito =
+    window.localStorage.getItem("carrito") === null
+      ? []
+      : JSON.parse(window.localStorage.getItem("carrito"));
+
+  console.log("elementos Carrito.jsx: ", elementosCarrito);
+  let sumaTotal = elementosCarrito.reduce((acumulador, producto) => {
+    return acumulador + producto.precio * producto.cantidad;
+  }, 0);
   return (
     <BodyDiv>
       <Head />
@@ -17,28 +26,33 @@ const Carrito = () => {
         <Table responsive>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Productos</th>
+              <th>ID</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
             </tr>
           </thead>
           <tbody>
+            {elementosCarrito.map((producto, index) => {
+              return (
+                <tr>
+                  <td>{index + 1}</td>
+                  <td>{producto.nombre}</td>
+                  <td>{producto.cantidad}</td>
+                  <td>
+                    {producto.precio * producto.cantidad}€ ({producto.precio}
+                    €/u)
+                  </td>
+                </tr>
+              );
+            })}
             <tr>
-              <td>1</td>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <td key={index}>Table cell {index}</td>
-              ))}
-            </tr>
-            <tr>
-              <td>2</td>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <td key={index}>Table cell {index}</td>
-              ))}
-            </tr>
-            <tr>
-              <td>3</td>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <td key={index}>Table cell {index}</td>
-              ))}
+              <td></td>
+              <td></td>
+              <td>
+                <b>Total</b>
+              </td>
+              <td>{sumaTotal}€</td>
             </tr>
           </tbody>
         </Table>

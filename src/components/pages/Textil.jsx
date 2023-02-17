@@ -4,9 +4,15 @@ import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {CardsDiv, TitleStyle, BodyTextil} from '../pages/style/GenericStyle';
+import {CardsDiv, TitleStyle,PrecioCards, BodyTextil, ImgCard, CardDiv2, RowDiv, ButtonInBottom, TextCards} from '../pages/style/GenericStyle';
+import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
+import img1 from "../../img/productos/textil/bolsa cruela.jpg";
+import añadirAlCarrito from "./hooks/AñadirAlCarrito";
+import Col from 'react-bootstrap/Col';
 
 const Textil = () => {
+  const productosTextil = useEffectObtenerProductos("téxtil");
+  console.log("productosComikeate", productosTextil);
   return (
     <BodyTextil>
     <Head />
@@ -14,18 +20,26 @@ const Textil = () => {
     <NavResponsive />
     <CardsDiv>
         <TitleStyle>TÉXTIL</TitleStyle>
-      <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-          <Card.Title>Textil</Card.Title>
-          <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-      </Card>
-    </CardsDiv>
+        <RowDiv xs={1} md={3} className="g-4">
+        {productosTextil.map((producto) => (
+        <Col>
+          <CardDiv2>
+            <ImgCard variant="top" src={img1}  />
+            <Card.Body>
+              <Card.Title><b>{producto.nombre}</b></Card.Title>
+              <TextCards>
+                {producto.infoProducto}
+              </TextCards>
+              <ButtonInBottom>
+                <PrecioCards><b>{producto.precio}€</b></PrecioCards>
+                <Button variant="primary" onClick={() => añadirAlCarrito(producto.nombre, producto.precio)}><b>AÑADIR AL CARRITO</b></Button>
+              </ButtonInBottom>
+            </Card.Body>
+          </CardDiv2>
+        </Col>
+      ))}
+    </RowDiv>
+      </CardsDiv>
     <Footer />
   </BodyTextil>
   );

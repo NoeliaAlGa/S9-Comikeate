@@ -22,8 +22,7 @@ const NavResponsive = () => {
                 <Nav.Link href="/Home">HOME</Nav.Link>
                 <Nav.Link href="/Comikeate">COMIKEATE</Nav.Link>
                 <Nav.Link href="/Textil">TÉXTIL</Nav.Link>
-                <Nav.Link href="/Ceramica">CERÁMICA</Nav.Link>
-                <Nav.Link href="/Papeleria">PAPELERÍA</Nav.Link>
+                <Nav.Link href="/Regalos">REGALOS</Nav.Link>
                 <Nav.Link href="/Madera">MADERA</Nav.Link>
                 <Nav.Link href="/Lienzos">LIENZOS</Nav.Link>
                 <Nav.Link href="/Contactanos">CONTACTANOS</Nav.Link>
