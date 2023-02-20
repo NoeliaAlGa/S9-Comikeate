@@ -64,14 +64,18 @@ const handleInput = (e, nombreInput) => {
                 type="text"
                 placeholder="Introduce tu nombre"
                 onChange={(e) => handleInput(e, "nombreUsuario")}
+                required
               />
             </DivLogInSignUp>
             <DivLogInSignUp>
-              <LabelsLogInSignUp >Email </LabelsLogInSignUp>
+              <LabelsLogInSignUp>Email </LabelsLogInSignUp>
               <input 
                 type="email" 
                 placeholder="Introduce tu mail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Ej. nombre@tuServidor.com"
                 onChange={(e) => handleInput(e, "emailUsuario")}
+                required
                 />
             </DivLogInSignUp>
             <DivLogInSignUp>
@@ -81,7 +85,10 @@ const handleInput = (e, nombreInput) => {
               <input
                 type="password"
                 placeholder="Introduce tu contraseña"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$"
+                title="Introduce una contraseña de mínimo 6 carácteres, incluyendo mayúsculas, minúsculas y números"
                 onChange={(e) => handleInput(e, "contraseñaUsuario")}
+                required
               />
             </DivLogInSignUp>
             <TextInformation>

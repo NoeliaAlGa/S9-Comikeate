@@ -3,10 +3,8 @@ import BuscarUsuario from "./BuscarUsuario";
 import GuardarLogIn from "./GuardarLogIn";
 
 function GuardarSignUp(nombreUsuario, mailUsuario, contraseñaUsuario) {
-    const usuarios =
-      window.localStorage.getItem("usuarios") === null
-        ? []
-        : JSON.parse(window.localStorage.getItem("usuarios"));
+  debugger;
+    const usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
 
       const busquedaUsuario= BuscarUsuario(nombreUsuario, contraseñaUsuario);
 
@@ -14,7 +12,6 @@ function GuardarSignUp(nombreUsuario, mailUsuario, contraseñaUsuario) {
         alert("Already registered user");
       }
       else {
-          localStorage.removeItem("LogedUser");
           GuardarLogIn(nombreUsuario, contraseñaUsuario);
         
         const usuario = {
