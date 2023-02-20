@@ -5,7 +5,6 @@ import InstaImg from '../../img/logo e iconos/instagram.png';
 import FaceImg from '../../img/logo e iconos/facebook.png';
 import LogInActualResponsive from './hooks/LogInActualResponsive';
 import {DivNavResponsive, IconoRRSS} from './style/styleNavResponsive';
-import {HomeButtons, ComikeateButtons, TextilButtons, CeramicaButtons, MaderaButtons, ContactanosButtons, LienzosButtons} from './style/styleNav';
 import { Link } from "react-router-dom";
 
 const NavResponsive = () => {

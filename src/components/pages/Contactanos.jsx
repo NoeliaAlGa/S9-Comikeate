@@ -30,6 +30,7 @@ const Contactanos = () => {
                 <Form.Control
                   type="email"
                   placeholder="Escribe tú mail aquí ^^"
+                  required 
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
