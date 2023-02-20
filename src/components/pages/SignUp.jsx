@@ -16,37 +16,31 @@ import {
   InformationRegistered,
   DivLISUStyle,
 } from "./style/LogInSignUpStyle";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+
 
 const SignUp = () => {
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [emailUsuario, setEmailUsuario] = useState("");
   const [contraseñaUsuario, setContraseñaUsuario] = useState("");
 
-const handleInput = (e, nombreInput) => {
-  if(nombreInput === "nombreUsuario") {
-    setNombreUsuario(e.target.value);
-  }
-  if(nombreInput === "emailUsuario") {
-    setEmailUsuario(e.target.value);
-  }
-  if(nombreInput === "contraseñaUsuario") {
-    setContraseñaUsuario(e.target.value);
-  }
-}
+  const handleInput = (e, nombreInput) => {
+    if (nombreInput === "nombreUsuario") {
+      setNombreUsuario(e.target.value);
+    }
+    if (nombreInput === "emailUsuario") {
+      setEmailUsuario(e.target.value);
+    }
+    if (nombreInput === "contraseñaUsuario") {
+      setContraseñaUsuario(e.target.value);
+    }
+  };
 
-  const toLogedUser =
-    window.localStorage.getItem("LogedUser") === undefined
-    ? <Link to="/SignUp">
-        <Button variant="primary" type="submit" onClick={() => GuardarSignUp(nombreUsuario, emailUsuario, contraseñaUsuario)}>
-        <b>SIGN UP</b>
-        </Button>
-      </Link>
-    : <Link to="/MenuUser">
-        <Button variant="primary" type="submit" onClick={() => GuardarSignUp(nombreUsuario, emailUsuario, contraseñaUsuario)}>
-        <b>SIGN UP</b>
-        </Button>
-      </Link>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    GuardarSignUp(nombreUsuario, emailUsuario, contraseñaUsuario);
+    return <Navigate to="/MenuUsuario" />;
+  };
 
   return (
     <BodySignUp>
@@ -57,44 +51,44 @@ const handleInput = (e, nombreInput) => {
         <TitleStyle>SIGN UP</TitleStyle>
         <DivLISUStyle>
           <ImgSignUp src={imgSignUp} alt="Comikeate"></ImgSignUp>
-          <StyleForm>
+          <StyleForm onSubmit={handleSubmit}>
             <DivLogInSignUp>
               <LabelsLogInSignUp>Nombre </LabelsLogInSignUp>
               <input
                 type="text"
                 placeholder="Introduce tu nombre"
-                onChange={(e) => handleInput(e, "nombreUsuario")}
+                onBlur={(e) => handleInput(e, "nombreUsuario")}
                 required
               />
             </DivLogInSignUp>
             <DivLogInSignUp>
               <LabelsLogInSignUp>Email </LabelsLogInSignUp>
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Introduce tu mail"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 title="Ej. nombre@tuServidor.com"
-                onChange={(e) => handleInput(e, "emailUsuario")}
+                onBlur={(e) => handleInput(e, "emailUsuario")}
                 required
-                />
+              />
             </DivLogInSignUp>
             <DivLogInSignUp>
-              <LabelsLogInSignUp>
-                Contraseña
-              </LabelsLogInSignUp>
+              <LabelsLogInSignUp>Contraseña</LabelsLogInSignUp>
               <input
                 type="password"
                 placeholder="Introduce tu contraseña"
                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$"
                 title="Introduce una contraseña de mínimo 6 carácteres, incluyendo mayúsculas, minúsculas y números"
-                onChange={(e) => handleInput(e, "contraseñaUsuario")}
+                onBlur={(e) => handleInput(e, "contraseñaUsuario")}
                 required
               />
             </DivLogInSignUp>
             <TextInformation>
-              * Registrarse és obligatorio para hacer la compra.
+              * Registrarse es obligatorio para hacer la compra.
             </TextInformation>
-            <>{toLogedUser}</>
+            <Button variant="primary" type="submit" >
+                    <b>SIGN UP</b>
+            </Button>
             <div>
               <InformationRegistered>
                 Ya estás registrado?

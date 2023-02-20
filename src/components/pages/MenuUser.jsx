@@ -13,18 +13,17 @@ const MenuUser = () => {
       ? []
       : JSON.parse(window.localStorage.getItem("listaPedidos"));
 
-    const pedidosListaInicio = listaPedidos.length === 0 
-        ?<DivNoPedidos>
-            <p>No hay pedidos para mostrar</p>
-        </DivNoPedidos>
-        : <></> ;
-
   const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
 
   const pedidosUsuarioActual = listaPedidos.filter(
     (pedido) => pedido.nombreCliente === actualLogIn.nombre
   );
 
+  const pedidosListaInicio = pedidosUsuarioActual.lenght === undefined
+  ?<DivNoPedidos>
+      <p>No hay pedidos para mostrar</p>
+  </DivNoPedidos>
+  : <></> ;
 
   return (
     <BodyDivAdminUser>
