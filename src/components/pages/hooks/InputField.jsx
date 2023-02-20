@@ -13,6 +13,7 @@ const InputField = ({ label, type, value, placeholder, onChange }) => {
           value={value}
           placeholder={placeholder}
           onChange={onChange}
+          required
         />
       </DivLogInSignUp>
     );

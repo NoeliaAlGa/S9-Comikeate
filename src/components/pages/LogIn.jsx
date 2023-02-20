@@ -20,6 +20,7 @@ import InputField from "./hooks/InputField";
 
 
 const LogIn = () => {
+  debugger;
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [contraseñaUsuario, setContraseñaUsuario] = useState("");
 
@@ -34,7 +35,7 @@ const LogIn = () => {
         window.location.href = "/MenuUser";
       }
     } else {
-      alert("Usuario o contraseña inválidos");
+      alert("Usuario no encontrado");
     }
   };
 
@@ -53,7 +54,8 @@ const LogIn = () => {
               type="text"
               value={nombreUsuario}
               placeholder="Introduce tu nombre"
-              onChange={(e) => setNombreUsuario(e.target.value)}
+              onChange={(e) => setNombreUsuario(e.target.value)
+              }
             />
             <InputField
               label="Contraseña: "
