@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Card, Row } from 'react-bootstrap';
+import { Card, Row, Button } from 'react-bootstrap';
 
 export const CardsDiv = styled.div `
       margin: 2rem; 
@@ -62,6 +62,22 @@ export const TextCards = styled(Card.Text)`
 export const PrecioCards = styled.h2`
     font-size: 24px;
     text-align: center;
+`
+
+export const ButtonDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const TextAreaStyle = styled.textarea `
+    height: 100px;
+    width: 100%;
+`
+
+export const ButtonComprar = styled(Button)`
+    display: block;
+    margin-top: 1rem;
 `
 
 export const BodyComikeate = styled.div `

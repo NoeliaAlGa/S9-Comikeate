@@ -4,11 +4,11 @@ import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
 import Table from "react-bootstrap/Table";
 import { BodyDiv } from "./style/HomeStyle";
-import { CardsDiv, TitleStyle } from "./style/GenericStyle";
+import { CardsDiv, TitleStyle, ButtonComprar, ButtonDiv,TextAreaStyle } from "./style/GenericStyle";
 import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
 import añadirListaPedidos from "./hooks/añadirListaPedidos";
 import borrarCarrito from "./hooks/BorrarCarrito";
+import { useState } from "react";
 
 const Carrito = () => {
   const elementosCarrito =
@@ -23,18 +23,22 @@ const Carrito = () => {
   const toLogedUser =
     window.localStorage.getItem("LogedUser") === undefined
     ? <Link to="/LogIn">
-        <Button variant="primary" type="submit">
+        <ButtonComprar variant="primary" type="submit">
         <b>SIGN UP</b>
-        </Button>
+        </ButtonComprar>
       </Link>
-    : <Link to="/MenuUser"><Button variant="primary" type="submit" onClick={() => {
-      añadirListaPedidos(elementosCarrito);
+    : <Link to="/MenuUser"><ButtonComprar variant="primary" type="submit" onClick={() => {
+      añadirListaPedidos(elementosCarrito, observacionesCliente);
       borrarCarrito();
       alert("Pagado Correctamente");
     }}>
         <b>COMPRAR</b>
-        </Button>
-        </Link>
+        </ButtonComprar>
+        </Link>;
+
+    const [observacionesCliente, setObservacionesCliente] = useState("");
+
+
   return (
     <BodyDiv>
       <Head />
@@ -75,7 +79,9 @@ const Carrito = () => {
             </tr>
           </tbody>
         </Table>
-        <>{toLogedUser}</>
+        <p><b>Observaciones:</b></p>
+        <TextAreaStyle placeholder="Escribe la talla de la camiseta, nombre a personalizar (especificando el modelo), dirección de envio o si tienes alguna duda. " onBlur={(e) => setObservacionesCliente(e.target.value)}></TextAreaStyle>
+        <ButtonDiv>{toLogedUser}</ButtonDiv>
       </CardsDiv>
       <Footer />
     </BodyDiv>
