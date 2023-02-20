@@ -39,9 +39,9 @@ async function ObtenerProductos(tipo) {
       }
       else {
         return [
-          {id:12, nombre:'Lienzo DragonBall', precio:15, infoProducto:'xxxx', img: 'lienzoDragonBall.jpg', tipo: 'lienzos'},
-          {id:13, nombre:'Cuadro madera Joker', precio:15, infoProducto:'xxxx', img: 'maderaJoker.jpg', tipo: 'lienzos'},
-          {id:14, nombre:'Star Wars acrilic acuarela', precio:15, infoProducto:'xxxx', img: 'acuarelaSW.jpg', tipo: 'lienzos'}
+          {id:12, nombre:'Lienzo DragonBall', precio:15, infoProducto:'Lienzo, Dragón Ball 4 personajes (Goku, Vegeta, Gohan, Brolly). Lienzo pintado a mano en acrílico. Medida 40x60.', img: 'lienzoDragonBall.jpg', tipo: 'lienzos'},
+          {id:13, nombre:'Cuadro madera Joker', precio:15, infoProducto:'Impresión ilustración Joker sobre madera. Medida 20x40.', img: 'maderaJoker.jpg', tipo: 'lienzos'},
+          {id:14, nombre:'Star Wars acrilic acuarela', precio:15, infoProducto:'Lienzo Star Wars, personaje Darth Moul. Lienzo pintado a mano en acrílico. Medida 30x40.', img: 'acuarelaSW.jpg', tipo: 'lienzos'}
         ];
       }
    

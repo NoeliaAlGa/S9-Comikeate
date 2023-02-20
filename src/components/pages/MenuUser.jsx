@@ -3,15 +3,21 @@ import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
 import Table from "react-bootstrap/Table";
-import { BodyDiv } from "./style/HomeStyle";
 import { CardsDiv, TitleStyle } from "./style/GenericStyle";
-import { UlStyle, TablaMDXL, TablaSM } from "./style/MenuUserAdminStyle";
+import { BodyDivAdminUser, DivNoPedidos, UlStyle, TablaMDXL, TablaSM } from "./style/MenuUserAdminStyle";
 
 const MenuUser = () => {
+  debugger;
   const listaPedidos =
     window.localStorage.getItem("listaPedidos") === null
       ? []
       : JSON.parse(window.localStorage.getItem("listaPedidos"));
+
+    const pedidosListaInicio = listaPedidos.length === 0 
+        ?<DivNoPedidos>
+            <p>No hay pedidos para mostrar</p>
+        </DivNoPedidos>
+        : <></> ;
 
   const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
 
@@ -21,7 +27,7 @@ const MenuUser = () => {
 
 
   return (
-    <BodyDiv>
+    <BodyDivAdminUser>
       <Head />
       <Nav />
       <NavResponsive />
@@ -99,8 +105,9 @@ const MenuUser = () => {
           </Table>
         </TablaSM>
       </CardsDiv>
+      <>{pedidosListaInicio}</>
       <Footer />
-    </BodyDiv>
+    </BodyDivAdminUser>
   );
 };
 export default MenuUser;

@@ -8,7 +8,7 @@ import ImgLienzos from "../../../img/productos/lienzos/acuarelaSW.jpg";
 
 export const BodyDiv = styled.div `
     background-color: orange;
-    height: auto;
+    height: 100%;
     width: 100%;
     padding-bottom: 2rem;
     @media (min-width: 768px) {

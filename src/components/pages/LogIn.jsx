@@ -17,7 +17,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import GuardarLogIn from "./hooks/GuardarLogIn";
 import InputField from "./hooks/InputField";
-
+// import MenuUsuarioOMenuAdmin from "./MenuUsuarioOMenuAdmin";
 
 const LogIn = () => {
   debugger;
@@ -25,7 +25,6 @@ const LogIn = () => {
   const [contraseñaUsuario, setContraseñaUsuario] = useState("");
 
   const handleLogin = (e) => {
-    e.preventDefault();
     const userEncontrado = BuscarUsuario(nombreUsuario, contraseñaUsuario);
     if (userEncontrado) {
       GuardarLogIn(nombreUsuario, contraseñaUsuario);
@@ -67,14 +66,14 @@ const LogIn = () => {
             <TextInformation>
               * Registrarse és obligatorio para hacer la compra.
             </TextInformation>
-            <Button variant="warning" type="submit" onClick={handleLogin}>
+            <Button variant="warning" type="button" onClick={handleLogin}>
             <b>LOG IN</b>
             </Button>
             <InformationRegistered>
                 No estas registrado?
               </InformationRegistered>
             <Link to="/SignUp">
-              <Button variant="warning" type="submit">
+              <Button variant="warning" type="button">
                 <b>SIGN UP</b>
               </Button>
             </Link>
