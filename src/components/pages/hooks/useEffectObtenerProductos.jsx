@@ -8,7 +8,6 @@ function useEffectObtenerProductos (tipo) {
       async function fetchData() {
         try {
           const data = await ObtenerProductos(tipo);
-          console.log('estoy en el useEffect__________________', data);
           setProductosComikeate(data);
         } catch (error) {
           console.error(error);
