@@ -5,7 +5,7 @@ import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import {CardsDiv, TitleStyle, BodyRegalos, RowDiv, CardDiv2, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
+import {CardsDiv, TitleStyle, BodyRegalos, RowDiv, CardDivRegalos, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
 import img1 from "../../img/productos/regalos/chapaAmigas.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
@@ -24,7 +24,7 @@ const Regalos = () => {
         <RowDiv xs={1} md={3} className="g-4">
           {productosRegalos.map((producto) => (
             <Col>
-              <CardDiv2>
+              <CardDivRegalos>
                 <ImgCard variant="top" src={img1} />
                 <Card.Body>
                   <Card.Title>
@@ -45,7 +45,7 @@ const Regalos = () => {
                     </Button>
                   </ButtonInBottom>
                 </Card.Body>
-              </CardDiv2>
+              </CardDivRegalos>
             </Col>
           ))}
         </RowDiv>

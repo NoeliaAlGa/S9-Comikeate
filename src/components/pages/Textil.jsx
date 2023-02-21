@@ -4,7 +4,7 @@ import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {CardsDiv, TitleStyle,PrecioCards, BodyTextil, ImgCard, CardDiv2, RowDiv, ButtonInBottom, TextCards} from '../pages/style/GenericStyle';
+import {CardsDiv, TitleStyle,PrecioCards, BodyTextil, ImgCard, CardDivTextil, RowDiv, ButtonInBottom, TextCards} from '../pages/style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
 import img1 from "../../img/productos/textil/bolsa cruela.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
@@ -23,7 +23,7 @@ const Textil = () => {
         <RowDiv xs={1} md={3} className="g-4">
         {productosTextil.map((producto) => (
         <Col>
-          <CardDiv2>
+          <CardDivTextil>
             <ImgCard variant="top" src={img1}  />
             <Card.Body>
               <Card.Title><b>{producto.nombre}</b></Card.Title>
@@ -35,7 +35,7 @@ const Textil = () => {
                 <Button variant="primary" onClick={() => añadirAlCarrito(producto.nombre, producto.precio)}><b>AÑADIR AL CARRITO</b></Button>
               </ButtonInBottom>
             </Card.Body>
-          </CardDiv2>
+          </CardDivTextil>
         </Col>
       ))}
     </RowDiv>

@@ -18,8 +18,9 @@ const MenuUser = () => {
   const pedidosUsuarioActual = listaPedidos.filter(
     (pedido) => pedido.nombreCliente === actualLogIn.nombre
   );
+  console.log("pedidosUsuarioActual", pedidosUsuarioActual);
 
-  const pedidosListaInicio = pedidosUsuarioActual.lenght === undefined
+  const pedidosListaInicio = pedidosUsuarioActual.length === 0
   ?<DivNoPedidos>
       <p>No hay pedidos para mostrar</p>
   </DivNoPedidos>
@@ -35,7 +36,7 @@ const MenuUser = () => {
         <TablaMDXL>
           <Table responsive="md" hover>
             <thead>
-              <tr>
+              <tr key="pedidos">
                 <th>#</th>
                 <th>Nº Pedido</th>
                 <th>Productos</th>
@@ -44,10 +45,10 @@ const MenuUser = () => {
             </thead>
             <tbody>
                 {pedidosUsuarioActual.map((pedido, index) => (
-                  <tr>
+                  <tr key={index}>
                     <td>{index + 1}</td>
-                    <td key="numPedido">{pedido.numPedido}</td>
-                    <td key="listaPedido">
+                    <td key={pedido.numPedido}>{pedido.numPedido}</td>
+                    <td key={pedido.length}>
                       <UlStyle>
                         {pedido.pedido.map((producto) => (
                           <li key={producto.nombre}>
@@ -59,7 +60,7 @@ const MenuUser = () => {
                         <li key={pedido.pedido.lenght}> {pedido.observaciones}</li>
                       </UlStyle>
                     </td>
-                    <td key="fechaPedido">{pedido.fechaPedido}</td>
+                    <td key={pedido.fechaPedido}>{pedido.fechaPedido}</td>
                   </tr>
                 ))}
             </tbody>
@@ -68,14 +69,14 @@ const MenuUser = () => {
         <TablaSM>
           <Table responsive="sm" hover>
             <thead>
-              <tr>
+              <tr key="pedidosResponsive">
                 <th>#</th>
                 <th>Pedido</th>
               </tr>
             </thead>
             <tbody>
                 {pedidosUsuarioActual.map((pedido, index) => (
-                  <tr>
+                  <tr key={index}>
                     <td>{index + 1}</td>
                     <td key="numPedido">
                       <UlStyle>

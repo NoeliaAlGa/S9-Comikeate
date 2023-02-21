@@ -5,7 +5,7 @@ import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import {CardsDiv, TitleStyle, BodyMadera, RowDiv, CardDiv2, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
+import {CardsDiv, TitleStyle, BodyMadera, RowDiv, CardDivMadera, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
 import img1 from "../../img/productos/madera/cuelgaPuertaPokemnmon.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
@@ -25,7 +25,7 @@ const Madera = () => {
         <RowDiv xs={1} md={3} className="g-4">
           {productosMadera.map((producto) => (
             <Col>
-              <CardDiv2>
+              <CardDivMadera>
                 <ImgCard variant="top" src={img1} />
                 <Card.Body>
                   <Card.Title>
@@ -46,7 +46,7 @@ const Madera = () => {
                     </Button>
                   </ButtonInBottom>
                 </Card.Body>
-              </CardDiv2>
+              </CardDivMadera>
             </Col>
           ))}
         </RowDiv>

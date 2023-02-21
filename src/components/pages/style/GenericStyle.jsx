@@ -9,23 +9,53 @@ export const RowDiv =styled(Row)`
 `
 
 export const CardDiv = styled(Card) `
+    height: auto;
     @media (min-width: 768px) {
         height: 610px;
     }
 `
-export const CardDiv2 = styled(Card) `
+export const CardDivRegalos = styled(Card) `
     position:relative;
+    height: auto;
     @media (min-width: 768px) {
-        height: 565px;
-
+        height: 520px;
     }
 `
+export const CardDivTextil = styled(Card) `
+    position:relative;
+    height: auto;
+    @media (min-width: 768px) {
+        height: 480px;
+    }
+`
+
+export const CardDivMadera = styled(Card) `
+    position:relative;
+    height: auto;
+    @media (min-width: 768px) {
+        height: 520px;
+    }
+`
+export const CardDivLienzos = styled(Card) `
+    position:relative;
+    height: auto;
+    @media (min-width: 768px) {
+        height: 520px;
+    }
+`
+export const CardDiv2 = styled(Card) `
+    position:relative;
+    height: 540px;
+`
 export const ButtonInBottom = styled.div`
-    position:absolute;
-    bottom:10px;
-    left: 0;
-    right: 0;
-    margin: auto;
+   
+    @media (min-width: 768px) {
+        position:absolute;
+        bottom:10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 `
 
 export const ImgCard = styled(Card.Img)`
@@ -57,6 +87,7 @@ export const TitleCards = styled.h2`
 export const TextCards = styled(Card.Text)`
     color: black;
     text-align: justify;
+    text-align-last: center;
     font-size: 16px;
 `
 export const PrecioCards = styled.h2`

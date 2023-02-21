@@ -5,7 +5,7 @@ import Footer from "../navigation/Footer";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import {CardsDiv, TitleStyle, BodyLienzos, RowDiv, CardDiv2, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
+import {CardsDiv, TitleStyle, BodyLienzos, RowDiv, CardDivLienzos, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
 import img1 from "../../img/productos/lienzos/maderaJoker.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
@@ -25,7 +25,7 @@ const Lienzos = () => {
         <RowDiv xs={1} md={3} className="g-4">
           {productosLienzos.map((producto) => (
             <Col>
-              <CardDiv2>
+              <CardDivLienzos>
                 <ImgCard variant="top" src={img1} />
                 <Card.Body>
                   <Card.Title>
@@ -46,7 +46,7 @@ const Lienzos = () => {
                     </Button>
                   </ButtonInBottom>
                 </Card.Body>
-              </CardDiv2>
+              </CardDivLienzos>
             </Col>
           ))}
         </RowDiv>
