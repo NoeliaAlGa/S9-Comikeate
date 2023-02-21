@@ -4,7 +4,10 @@ Creació d'un projecte propi, utilitzant els coneixements obtinguts.
 Descripció
 
 Web de venda de regals originals.
-Elements amb il·lustracions originals de sèries, pel·lícules... amb l'opció de personalitzar-los 100% amb fotos, noms del client.
+Elements amb il·lustracions originals de sèries, pel·lícules... amb l'opció de personalitzar-los 100%.
+
+Té un usuari Admin que pot veure les comandes i els missatges enviats (Usuari:Admin, Contrasenya: Admin).
+L'usuari pot comprar una vegada està loguejat i es veurà la compra al Menú d'Usuari.
 
 
 Requisits mínims
