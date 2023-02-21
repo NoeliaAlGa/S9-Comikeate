@@ -1,11 +1,14 @@
+import Router from './components/Routes/routes';
+import {BodyStyle} from './style/StyleApp';
+import UsuariAdminLS from './hooks/UsuariAdminLS';
 
-function App() {
-  return (
-    <div>
-      <header>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    UsuariAdminLS();
+    return (
+        <BodyStyle>
+            <Router />
+        </BodyStyle>
+    )
+} 
 
 export default App;
