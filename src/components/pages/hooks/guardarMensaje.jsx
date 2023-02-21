@@ -1,7 +1,7 @@
 import guardarFechactual from "./guardarFechactual";
 
 function guardarMensaje(mailContacto, mensajeContacto) {
-    debugger;
+   
   const mensajes = window.localStorage.getItem("mensajes") === null
   ? []
   : JSON.parse(window.localStorage.getItem("mensajes"));

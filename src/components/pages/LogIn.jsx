@@ -20,7 +20,7 @@ import InputField from "./hooks/InputField";
 
 
 const LogIn = () => {
-  debugger;
+ 
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [contraseñaUsuario, setContraseñaUsuario] = useState("");
 

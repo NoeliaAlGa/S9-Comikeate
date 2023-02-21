@@ -1,5 +1,5 @@
 function GuardarLogIn(nombreUsuario, contraseñaUsuario) {
-  debugger;
+ 
   if (window.localStorage.getItem("LogedUser") !== null) {
     localStorage.removeItem("LogedUser");
   }

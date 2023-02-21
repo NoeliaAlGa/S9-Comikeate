@@ -7,7 +7,7 @@ import { CardsDiv, TitleStyle } from "./style/GenericStyle";
 import { BodyDivAdminUser, DivNoPedidos, UlStyle, TablaMDXL, TablaSM } from "./style/MenuUserAdminStyle";
 
 const MenuUser = () => {
-  debugger;
+
   const listaPedidos =
     window.localStorage.getItem("listaPedidos") === null
       ? []

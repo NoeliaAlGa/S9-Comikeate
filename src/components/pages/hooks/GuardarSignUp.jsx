@@ -26,7 +26,6 @@ function GuardarSignUp(nombreUsuario, mailUsuario, contraseñaUsuario) {
           console.log("User registred: ",usuario);
           console.log("Users registred: ",usuarios);
           window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
-          debugger;
           window.location.href = "/MenuUser";
       }
   
