@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ImgComikeate from "../../../img/productos/personalizaciones/familiabebe.jpg";
-import ImgTextil from "../../../img/productos/textil/bolsa cruela.jpg";
+import ImgComikeate from "../../../img/productos/personalizaciones/diadelamadre2.jpg";
+import ImgTextil from "../../../img/productos/textil/bolsacruela.jpg";
 import ImgCeramica from "../../../img/productos/regalos/taza.jpg";
 import ImgMadera from "../../../img/productos/madera/cuelgaPuertaPokemnmon.jpg";
 import ImgLienzos from "../../../img/productos/lienzos/acuarelaSW.jpg";
@@ -103,7 +103,8 @@ export const CartDivTextil = styled(CartDivComikeate) `
 `
 
 export const ImgStyleTextil = styled(ImgStyleComikeate) `
-    background-image: url(${ImgTextil});
+  background-image: url(${ImgTextil});
+
 `
 
 export const CartDivCeramica = styled(CartDivComikeate) `

@@ -20,7 +20,7 @@ import ImgSW from "../../../img/productos/lienzos/acuarelaSW.jpg"
 
 function importarImagen(nombre) {
     // Comikeate
-  if( nombre === "Ilustración") {
+  if( nombre === "Ilustración digital") {
     return ImgIlustracion
   }
   if( nombre === "Ilustración en lienzo") {

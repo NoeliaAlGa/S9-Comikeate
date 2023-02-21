@@ -11,7 +11,7 @@ async function ObtenerProductos(tipo) {
       console.error(error);
       if(tipo === "comikeate") {
         return [
-          {id:1, nombre:'Ilustración', precio:15, infoProducto:'Convierte a tu familia y amigos en comic o en sus personajes favoritos. Envía su foto y explicadnos cuál es tu idea. Estaremos en contacto en todo momento mientras se realiza la ilustración. Se realizarán 2 pruebas, una al hacer el esbozo y otra al acabar el coloreado, para poder hacer cambios si es necesario. Una vez entregado el trabajo no se podrán hacer cambios.', img: 'familiabebe.jpg', tipo: 'comikeate'},
+          {id:1, nombre:'Ilustración digital', precio:15, infoProducto:'Convierte a tu familia y amigos en comic o en sus personajes favoritos. Envía su foto y explicadnos cuál es tu idea. Estaremos en contacto en todo momento mientras se realiza la ilustración. Se realizarán 2 pruebas, una al hacer el esbozo y otra al acabar el coloreado, para poder hacer cambios si es necesario. Una vez entregado el trabajo no se podrán hacer cambios.', img: 'familiabebe.jpg', tipo: 'comikeate'},
           {id:2, nombre:'Ilustración en lienzo', precio:55, infoProducto:'Lienzo de 30x40 con ilustración personalizada. Envía una foto y explicadnos cuál es tu idea. Estaremos en contacto en todo momento mientras se realiza la ilustración. Se realizarán 2 pruebas, una al hacer el esbozo y otra al acabar el coloreado, para poder hacer cambios si es necesario. ¡Una vez dado el ok a la prueba se realizará la impresión del lienzo y en pocos días lo tendrás en casa!.', img: 'diadelamadre.jpg', tipo: 'comikeate'}
         ]
       }
