@@ -11,6 +11,9 @@ export const RowDiv =styled(Row)`
 export const CardDiv = styled(Card) `
     height: auto;
     @media (min-width: 768px) {
+        height: 680px;
+    }
+    @media (min-width: 1026px) {
         height: 610px;
     }
 `
@@ -18,14 +21,20 @@ export const CardDivRegalos = styled(Card) `
     position:relative;
     height: auto;
     @media (min-width: 768px) {
-        height: 520px;
+        height: 630px;
+    }
+    @media (min-width: 1026px) {
+        height: 570px;
     }
 `
 export const CardDivTextil = styled(Card) `
     position:relative;
     height: auto;
     @media (min-width: 768px) {
-        height: 480px;
+        height: 680px;
+    }
+    @media (min-width: 1026px) {
+        height: 570px;
     }
 `
 
@@ -33,6 +42,9 @@ export const CardDivMadera = styled(Card) `
     position:relative;
     height: auto;
     @media (min-width: 768px) {
+        height: 580px;
+    }
+    @media (min-width: 1026px) {
         height: 520px;
     }
 `
@@ -40,7 +52,10 @@ export const CardDivLienzos = styled(Card) `
     position:relative;
     height: auto;
     @media (min-width: 768px) {
-        height: 520px;
+        height: 570px;
+    }
+    @media (min-width: 1026px) {
+        height: 540px;
     }
 `
 export const CardDiv2 = styled(Card) `
@@ -116,6 +131,7 @@ export const BodyComikeate = styled.div `
     height: 100%;
     width: 100%;
     padding-bottom: 2rem;
+   
 `
 export const BodyTextil = styled(BodyComikeate) `
     background-color: ForestGreen;

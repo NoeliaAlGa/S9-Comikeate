@@ -6,9 +6,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {CardsDiv, TitleStyle,PrecioCards, BodyTextil, ImgCard, CardDivTextil, RowDiv, ButtonInBottom, TextCards} from '../pages/style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
-import img1 from "../../img/productos/textil/bolsa cruela.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
 import Col from 'react-bootstrap/Col';
+import importarImagen from "./hooks/importarImagen";
 
 const Textil = () => {
   const productosTextil = useEffectObtenerProductos("téxtil");
@@ -24,7 +24,7 @@ const Textil = () => {
         {productosTextil.map((producto) => (
         <Col>
           <CardDivTextil>
-            <ImgCard variant="top" src={img1}  />
+            <ImgCard variant="top" src={importarImagen(producto.nombre)}  />
             <Card.Body>
               <Card.Title><b>{producto.nombre}</b></Card.Title>
               <TextCards>

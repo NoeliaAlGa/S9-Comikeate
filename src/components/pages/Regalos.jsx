@@ -7,8 +7,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import {CardsDiv, TitleStyle, BodyRegalos, RowDiv, CardDivRegalos, ImgCard, TextCards,ButtonInBottom, PrecioCards } from './style/GenericStyle';
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
-import img1 from "../../img/productos/regalos/chapaAmigas.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
+import importarImagen from "./hooks/importarImagen";
 
 const Regalos = () => {
   const productosRegalos = useEffectObtenerProductos("regalos");
@@ -25,7 +25,7 @@ const Regalos = () => {
           {productosRegalos.map((producto) => (
             <Col>
               <CardDivRegalos>
-                <ImgCard variant="top" src={img1} />
+                <ImgCard variant="top" src={importarImagen(producto.nombre)} />
                 <Card.Body>
                   <Card.Title>
                     <b>{producto.nombre}</b>

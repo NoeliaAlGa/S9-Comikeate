@@ -3,7 +3,7 @@ import Head from "..//navigation/Head";
 import Nav from "../navigation/Nav";
 import NavResponsive from "../navigation/NavResponsive";
 import Footer from "../navigation/Footer";
-import {CartsDiv, CartDivComikeate, BodyDiv, ImgStyleComikeate, TitleCart, CartDivTextil, ImgStyleTextil, CartDivCeramica, ImgStyleCeramica, CartDivPapeleria, ImgStylePapeleria, CartDivMadera, ImgStyleMadera, CartDivLienzos, ImgStyleLienzos } from "../pages/style/HomeStyle";
+import {CartsDiv, CartDivComikeate, BodyDiv, ImgStyleComikeate, TitleCart, CartDivTextil, ImgStyleTextil, CartDivCeramica, ImgStyleCeramica, CartDivMadera, ImgStyleMadera, CartDivLienzos, ImgStyleLienzos } from "../pages/style/HomeStyle";
 
 const Home = () => {
 
@@ -30,12 +30,6 @@ return (<BodyDiv>
                         <TitleCart>REGALOS</TitleCart>
                     </Link>
                 </CartDivCeramica>
-                <CartDivPapeleria>
-                    <ImgStylePapeleria />
-                    <Link to="/Papeleria" style={{ textDecoration: 'none' }}>
-                        <TitleCart>PAPELERÍA</TitleCart>
-                    </Link>
-                </CartDivPapeleria>
                 <CartDivMadera>
                     <ImgStyleMadera />
                     <Link to="/Madera" style={{ textDecoration: 'none' }}>

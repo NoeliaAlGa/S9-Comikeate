@@ -17,8 +17,8 @@ import {
   TextCards,
 } from "../pages/style/GenericStyle";
 import useEffectObtenerProductos from "./hooks/useEffectObtenerProductos";
-import img1 from "../../img/productos/personalizaciones/familiabebe.jpg";
 import añadirAlCarrito from "./hooks/AñadirAlCarrito";
+import importarImagen from "./hooks/importarImagen";
 
 const Comikeate = () => {
   const productosComikeate = useEffectObtenerProductos("comikeate");
@@ -32,9 +32,9 @@ const Comikeate = () => {
         <TitleStyle>COMIKEATE</TitleStyle>
         <RowDiv xs={1} md={2} className="g-4">
           {productosComikeate.map((producto) => (
-            <Col>
+              <Col>
               <CardDiv>
-                <ImgCard variant="top" src={img1} />
+                <ImgCard variant="top" src={importarImagen(producto.nombre)} />
                 <Card.Body>
                   <Card.Title>
                     <b>{producto.nombre}</b>
@@ -56,7 +56,8 @@ const Comikeate = () => {
                 </Card.Body>
               </CardDiv>
             </Col>
-          ))}
+            )
+          )}
         </RowDiv>
       </CardsDiv>
       <Footer />

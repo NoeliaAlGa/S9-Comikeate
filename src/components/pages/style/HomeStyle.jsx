@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import ImgComikeate from "../../../img/productos/personalizaciones/IMG_20210310_215728_884.jpg";
+import ImgComikeate from "../../../img/productos/personalizaciones/familiabebe.jpg";
 import ImgTextil from "../../../img/productos/textil/sudadera.jpg";
-import ImgCeramica from "../../../img/productos/ceramica/taza.jpg";
-import ImgPapeleria from "../../../img/productos/papeleria/postal.jpg";
+import ImgCeramica from "../../../img/productos/regalos/taza.jpg";
 import ImgMadera from "../../../img/productos/madera/cuelgaPuertaPokemnmon.jpg";
 import ImgLienzos from "../../../img/productos/lienzos/acuarelaSW.jpg";
 
@@ -60,6 +59,11 @@ export const ImgStyleComikeate = styled.div `
         background-position: top;
         background-size: 100%;
     }
+    @media (min-width: 1200px) {
+      height: 85%;
+      background-position: center;
+      background-size: 100%;
+  }
 `
 
 export const TitleCart = styled.h1 `
@@ -79,6 +83,9 @@ export const TitleCart = styled.h1 `
     &:hover {
         color: black;
     }
+  }
+  @media (min-width: 1200px) {
+    margin-top: 10px;
   }
    
 `
@@ -114,20 +121,6 @@ export const ImgStyleCeramica = styled(ImgStyleComikeate) `
     background-image: url(${ImgCeramica});
 `
 
-export const CartDivPapeleria = styled(CartDivComikeate) `
-    background-color: cyan;
-
-  @media (min-width: 1024px) {
-    background-color: black;
-    &:hover {
-        background-color: cyan;
-    }
-  }
-`
-
-export const ImgStylePapeleria = styled(ImgStyleComikeate) `
-    background-image: url(${ImgPapeleria});
-`
 
 export const CartDivMadera = styled(CartDivComikeate) `
     background-color: rgb(255, 195, 0);
