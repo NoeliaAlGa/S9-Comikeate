@@ -11,8 +11,19 @@ import {
   CardsDiv,
 } from "../pages/style/GenericStyle";
 import {ImgContactStyle, DivFormStyle, DivForm, TextAreaStyle, BStyle} from "./style/ContactanosStyle";
+import { useState } from "react";
+import guardarMensaje from "./hooks/guardarMensaje";
 
 const Contactanos = () => {
+  const [mailContacto, setMailContacto] = useState("");
+  const [mensajeContacto, setMensajeContacto] = useState("");
+
+  const handleLogin = (e) => {
+    guardarMensaje(mailContacto, mensajeContacto);
+    window.location.href = "/Home";
+      alert("¡Mensaje enviado correctamente, revisa tu correo en los próximos días y gracias por contactar con nosotros!");
+  };
+  
   return (
     <BodyContactanos>
       <Head />
@@ -22,7 +33,7 @@ const Contactanos = () => {
         <TitleStyle>CONTACTANOS</TitleStyle>
         <DivFormStyle>
           <DivForm>
-            <Form>
+            <Form onSubmit={handleLogin}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>
                   <BStyle>Email</BStyle>
@@ -30,6 +41,9 @@ const Contactanos = () => {
                 <Form.Control
                   type="email"
                   placeholder="Escribe tú mail aquí ^^"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Ej. nombre@tuServidor.com"
+                  onBlur={(e) => setMailContacto(e.target.value)}
                   required 
                 />
               </Form.Group>
@@ -38,7 +52,11 @@ const Contactanos = () => {
                   <BStyle>Mensaje</BStyle>
                 </Form.Label>
                 <div>
-                  <TextAreaStyle type="text" placeholder="Tú mensaje aquí ^^" />
+                  <TextAreaStyle 
+                  type="text" 
+                  placeholder="Tú mensaje aquí ^^" 
+                  onBlur={(e) => setMensajeContacto(e.target.value)}
+                  required />
                 </div>
               </Form.Group>
               <Button variant="warning" type="submit">
