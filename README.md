@@ -1,4 +1,4 @@
-S9. Final
+S9. Web venda
 Creació d'un projecte propi, utilitzant els coneixements obtinguts.
 
 Descripció
